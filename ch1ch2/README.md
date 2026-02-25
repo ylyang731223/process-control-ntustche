@@ -11,11 +11,9 @@ This folder contains interactive tutorials and lecture notes for **Process Contr
 | 檔案 | 說明 |
 |------|------|
 | `ch1ch2_interactive_EN.html` | 英文互動式教學網頁 (English interactive tutorial) |
-| `ch1ch2_互動教學.html`（上層目錄） | 中文互動式教學網頁 (Chinese interactive tutorial) |
+| `ch1ch2_互動教學.html` | 中文互動式教學網頁 (Chinese interactive tutorial) |
 | `ch1ch2_lecture_notes.docx` | 中英雙語講義 (Bilingual lecture notes) |
 | `ch1ch2_lecture_notes.pdf` | 講義 PDF 版本 |
-
-> 直接用瀏覽器開啟 `.html` 檔案即可使用，不需要伺服器或網路連線。
 
 ---
 
@@ -75,17 +73,52 @@ This folder contains interactive tutorials and lecture notes for **Process Contr
 
 ## 使用方式 / How to Use
 
+### 本機開啟 / Local
+
 1. 用瀏覽器開啟 `ch1ch2_interactive_EN.html`（英文）或 `ch1ch2_互動教學.html`（中文）
 2. 點擊左側 sidebar 選擇 Unit
 3. 點擊「Next Step →」逐步展開推導
 4. 拖曳 Unit 4 的滑桿觀察響應曲線
 5. 完成每個 Unit 的隨堂測驗
 
+### 在 GitHub 上開啟 / Open from GitHub
+
+GitHub 無法直接在網頁內渲染 `.html` 檔案。以下提供三種方式：
+
+**方法一：GitHub Pages（推薦）**
+
+若 repository 已啟用 GitHub Pages（Settings → Pages → Source: `main` / `/ (root)`），可直接用以下網址開啟：
+
+| 語言 | 連結 |
+|------|------|
+| English | [ch1ch2_interactive_EN.html](https://ylyang731223.github.io/process-control-ntustche/ch1ch2/ch1ch2_interactive_EN.html) |
+| 中文 | [ch1ch2_互動教學.html](https://ylyang731223.github.io/process-control-ntustche/ch1ch2/ch1ch2_互動教學.html) |
+
+**方法二：下載後本機開啟**
+
+1. 前往 [repository 首頁](https://github.com/ylyang731223/process-control-ntustche)
+2. 點擊綠色 **Code** 按鈕 → **Download ZIP**
+3. 解壓縮後，直接用瀏覽器開啟 `.html` 檔案
+
+**方法三：使用 `git clone`**
+
+```bash
+git clone https://github.com/ylyang731223/process-control-ntustche.git
+cd process-control-ntustche/ch1ch2
+# 用瀏覽器開啟
+start ch1ch2_interactive_EN.html   # Windows
+open ch1ch2_interactive_EN.html    # macOS
+xdg-open ch1ch2_interactive_EN.html  # Linux
+```
+
+> `.docx` 可在 GitHub 頁面直接預覽；`.pdf` 可在線上檢視或下載。
+
 ---
 
 ## 技術資訊 / Technical Notes
 
-- 數學公式渲染：KaTeX
+- 數學公式渲染：KaTeX（CDN 載入，需網路連線）
 - 圖表：SVG（方塊圖、混合槽示意圖）+ Canvas（互動響應曲線）
 - 純前端，無需後端伺服器
 - 講義字體：英文 Times New Roman / 中文標楷體
+
