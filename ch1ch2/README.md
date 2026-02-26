@@ -34,6 +34,7 @@ This folder contains interactive tutorials and lecture notes for **Process Contr
 | 4 | 一階系統求解與 Step Response | First-Order System Solution & Step Response |
 | 5 | 能量平衡與標準一階形式 | Energy Balance & Standard First-Order Form |
 | 6 | Laplace 轉換基礎 | Laplace Transform Fundamentals |
+| 6→7 | 微分的 Laplace 轉換（補充） | Transforms of Derivatives (Supplement) |
 | 7 | 轉移函數 | Transfer Function |
 | 8 | 部分分式與根的型態 | Partial Fractions & Root Types |
 
@@ -42,8 +43,11 @@ This folder contains interactive tutorials and lecture notes for **Process Contr
 ## 互動功能 / Interactive Features
 
 - **逐步推導展開** — 物料平衡、能量平衡、積分因子法求解、Laplace 轉換推導（含 Table 2.1 全部 12 組完整推導）
+- **微分轉換可點擊推導** — Transforms of Derivatives 表格（一階、二階、n 階），點擊列即展開完整推導（分部積分、遞推、數學歸納法）
 - **互動圖表** — 拖曳滑桿即時改變 τ、Kp、A，觀察 Step Response 曲線變化（Canvas）
 - **可點擊方塊圖** — 點選 R(s)、Gc(s)、Gp(s)、D(s) 等方塊，顯示對應說明
+- **τ 與 Kp 物理意義 + 生活案例** — 浴缸 vs. 咖啡杯（τ）、稀釋果汁 / 調漆（Kp）等直覺比喻
+- **加熱槽示意圖** — Unit 5 能量平衡示意圖（SVG / PNG），對照 Unit 3 混合槽
 - **分頁式範例** — Unit 8 提供 5 種根型態的部分分式展開範例（相異實根、重根、共軛複數根、正實根、純虛根）
 - **隨堂測驗** — 每個 Unit 附 1–3 題選擇題，即時回饋答案
 - **進度追蹤** — 側邊欄顯示完成進度
@@ -58,16 +62,38 @@ This folder contains interactive tutorials and lecture notes for **Process Contr
 |------|------|
 | τ = V/v | 時間常數 = 滯留時間 (time constant = residence time) |
 | Kp = v₃/v | 穩態增益 (steady-state gain) |
-| Y(t) = Kp·A·(1 − e^(−t/τ)) | 一階系統 Step Response |
+| Y(t) = Kp·A·(1 − e⁻ᵗ/τ) | 一階系統 Step Response |
 | G(s) = Kp / (τs + 1) | 一階系統轉移函數 |
+
+### τ 與 Kp 的物理意義 / Physical Meaning
+
+- **τ（時間常數）**：系統達到 63.2% 穩態值所需時間；τ 越大，響應越慢。生活案例：浴缸 vs. 咖啡杯、尖峰時段高速公路。
+- **Kp（穩態增益）**：輸入改變 1 單位時，輸出最終改變多少。生活案例：稀釋果汁、調和油漆顏色。
 
 ### Table 2.1 — Laplace Transform Pairs
 
 包含 12 組 Laplace 轉換對及其完整推導：unit step、ramp、exponential decay、power、sine、cosine、hyperbolic sine/cosine、damped sine/cosine 等。
 
+### Transforms of Derivatives — 微分的 Laplace 轉換
+
+| 階數 | 公式 |
+|------|------|
+| 一階 | L{df/dt} = sF(s) − f(0) |
+| 二階 | L{d²f/dt²} = s²F(s) − sf(0) − f'(0) |
+| n 階 | L{dⁿf/dtⁿ} = sⁿF(s) − sⁿ⁻¹f(0) − ... − f⁽ⁿ⁻¹⁾(0) |
+
+零初始條件下：微分直接變成乘以 s → 這正是轉移函數能成立的原因。
+
+### 為什麼要學轉移函數 / Why Learn Transfer Functions
+
+- 微分方程 → 代數：ODE 在 s 域變成代數方程
+- 串接系統 = 相乘：G(s) = G₁(s)·G₂(s)
+- 穩定性一目了然：極點實部為負 → 穩定
+- 控制器設計的基礎：PID、根軌跡、Bode 圖皆建立於此
+
 ### 物料平衡 vs. 能量平衡對照表
 
-以混合槽（物料）與加熱槽（能量）為例，對照兩種平衡的標準一階形式推導。
+以混合槽（物料）與加熱槽（能量）為例，對照兩種平衡的標準一階形式推導。能量平衡 Kp = 1（輸入輸出係數相同）。
 
 ---
 
@@ -118,7 +144,8 @@ xdg-open ch1ch2_interactive_EN.html  # Linux
 ## 技術資訊 / Technical Notes
 
 - 數學公式渲染：KaTeX（CDN 載入，需網路連線）
-- 圖表：SVG（方塊圖、混合槽示意圖）+ Canvas（互動響應曲線）
+- 圖表：SVG（方塊圖、混合槽示意圖、加熱槽示意圖）+ Canvas（互動響應曲線）
+- 可點擊表格：Table 2.1（12 組）+ Transforms of Derivatives（3 組），點擊列展開推導
 - 純前端，無需後端伺服器
 - 講義字體：英文 Times New Roman / 中文標楷體
 
