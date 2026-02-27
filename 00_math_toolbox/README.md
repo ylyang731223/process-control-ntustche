@@ -12,7 +12,6 @@ This folder contains the **Engineering Math Toolbox** — interactive tutorials 
 |------|------|
 | `math_toolbox_interactive_EN.html` | 英文互動式教學網頁 (English interactive tutorial) |
 | `math_toolbox_互動教學.html` | 中文互動式教學網頁 (Chinese interactive tutorial) |
-| `math_toolbox_lecture_notes.docx` | 中英雙語講義 (Bilingual lecture notes) |
 | `math_toolbox_lecture_notes.pdf` | 講義 PDF 版本 |
 
 ---
@@ -88,40 +87,8 @@ This folder contains the **Engineering Math Toolbox** — interactive tutorials 
 
 ---
 
-## 講義格式 / Lecture Notes Format
-
-- **中文段落**：粗體標籤 + 內文（黑色）
-- **英文段落**：粗體標籤 + 內文（斜體灰色 #646464）
-- **共用數學**：推導步驟不重複，中英共用
-- 字體：英文 Times New Roman / 中文標楷體
-- 封面含台科大校徽與化工系 logo
-
----
-
-## 建置腳本 / Build Scripts
-
-以下 Python 腳本用於生成與修改教材內容（使用 `python-docx`、`lxml`）：
-
-| 腳本 | 用途 |
-|------|------|
-| `create_standalone_and_revert.py` | 初始建立 HTML + DOCX |
-| `rebuild_docx_bilingual.py` | 重建 DOCX 為逐段中英對照格式 |
-| `expand_toolbox_m9_m16.py` | 擴充 M9–M16 內容 |
-| `add_cover_toc_toolbox.py` | 新增封面與目錄 |
-| `fix_cover_toc.py` | 修復封面與目錄 |
-| `update_toc_chapters.py` | 目錄加入對應章節標示 |
-| `add_logo_to_toolbox.py` | 新增校徽 logo |
-| `add_examples_m1_m16.py` | 新增 16 題練習例題 |
-| `add_math_toolbox.py` | 新增 Math Toolbox 至 HTML |
-| `add_math_toolbox_docx.py` | 新增 Math Toolbox 至 DOCX |
-| `update_toolbox_docx.py` | 更新 DOCX 內容 |
-| `fix_math_formatting.py` | 修正數學符號格式（∫ 上下限、lim、上標） |
-
----
-
 ## 技術資訊 / Technical Notes
 
 - 數學公式渲染：KaTeX（CDN 載入，需網路連線）
 - 純前端，無需後端伺服器
-- 講義字體：英文 Times New Roman / 中文標楷體
-- DOCX 透過 `docx2pdf` 轉換為 PDF
+
