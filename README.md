@@ -1,8 +1,8 @@
-# 程序控制 / Process Control — NTUST Chemical Engineering
+# 程序控制 / Process Control — NTUST
 
-國立臺灣科技大學化學工程系「程序控制」課程教材：互動教學網頁（中英文）與講義。
+國立臺灣科技大學【化工系】程序控制 / 【先進科技專班】程序控制 課程教材：互動教學網頁（中英文）與講義。
 
-Course materials for the **Undergraduate Process Control** course at NTUST Chemical Engineering — interactive tutorials (EN/ZH) and lecture notes.
+Course materials for **Process Control** at NTUST — Department of Chemical Engineering / Advanced Technology Program. Interactive tutorials (EN/ZH) and lecture notes.
 
 ---
 
@@ -115,4 +115,3 @@ start 01_ch1ch2/ch1ch2_interactive_EN.html   # Windows
 - 數學公式渲染：KaTeX（CDN 載入，需網路連線）
 - 圖表：SVG + Canvas
 - 純前端，無需後端伺服器
-
