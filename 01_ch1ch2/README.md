@@ -1,8 +1,8 @@
 # Ch1 & Ch2 — 程序控制基礎 / Process Control Fundamentals
 
-本資料夾包含程序控制課程 Chapter 1–2 的互動教學網頁、講義與演講稿。
+本資料夾包含程序控制課程 Chapter 1–2 的互動教學網頁與講義。
 
-This folder contains interactive tutorials, lecture notes, and lecture scripts for **Process Control** Chapters 1–2.
+This folder contains interactive tutorials and lecture notes for **Process Control** Chapters 1–2.
 
 ---
 
@@ -12,10 +12,7 @@ This folder contains interactive tutorials, lecture notes, and lecture scripts f
 |------|------|
 | `ch1ch2_interactive_EN.html` | 英文互動式教學網頁 (English interactive tutorial) |
 | `ch1ch2_互動教學.html` | 中文互動式教學網頁 (Chinese interactive tutorial) |
-| `ch1ch2_lecture_notes.docx` | 中英雙語講義 Word 版本 (Bilingual lecture notes, Word) |
 | `ch1ch2_lecture_notes.pdf` | 講義 PDF 版本 (Lecture notes, PDF) |
-| `Process_Control_Ch1_Ch2_Handout_Lecture_Script_EN.docx` | 英文演講稿 — 講義版 (English lecture script — Handout) |
-| `Process_Control_Ch1_Ch2_Slides_Lecture_Script_EN.docx` | 英文演講稿 — 投影片版 (English lecture script — Slides) |
 
 ---
 
