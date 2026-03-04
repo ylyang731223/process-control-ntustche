@@ -635,6 +635,19 @@ h3{margin-top:8px;margin-bottom:8px}
 <!-- ====== UNIT 8: Partial Fraction Expansion ====== -->
 <section class="unit" id="u-7">
   <div class="uh"><span class="tag">Chapter 2</span><h1>Partial Fraction Expansion & Root Types</h1><p>The core technique for inverse Laplace transforms. Click the tabs to switch between 5 types of roots (including Example 2.3 / 3.2).</p></div>
+
+  <div class="ib tip"><span class="ic">&#127919;</span><div class="ix"><strong>Why Do We Need Partial Fractions &amp; Root Type Analysis?</strong><br><br>
+After obtaining the transfer function $G(s)$, the system output in the $s$-domain is:
+$$Y(s) = G(s)\,X(s) = \frac{N(s)}{D(s)}$$
+To return to the time domain $y(t)$, we must compute $\mathcal{L}^{-1}\{Y(s)\}$. However, standard Laplace tables only cover <strong>simple fractions</strong> like $\dfrac{1}{s+a}$ or $\dfrac{\omega}{s^2+\omega^2}$, not complex ratios of polynomials.<br><br>
+<strong>Partial fraction expansion</strong> decomposes $Y(s)$ into a sum of simple fractions whose inverse transforms are known:<br>
+&nbsp;&nbsp;$\dfrac{N(s)}{D(s)} = \dfrac{A_1}{s-p_1} + \dfrac{A_2}{s-p_2} + \cdots$<br><br>
+The <strong>roots of $D(s)$</strong> (i.e., the <em>poles</em>) directly determine:<br>
+&bull; <strong>The form of each time-domain term</strong> &mdash; exponential, oscillatory, growing, or constant<br>
+&bull; <strong>System stability</strong> &mdash; all poles in the left half-plane $\Rightarrow$ stable; any pole in the right half-plane $\Rightarrow$ unstable<br>
+&bull; <strong>Response speed and oscillation frequency</strong> &mdash; determined by the real and imaginary parts of each pole<br><br>
+<em>In short: factoring the denominator &rarr; finding the roots &rarr; knowing exactly what the time response looks like, without solving any ODE.</em></div></div>
+
   <div class="tg">
     <button class="tb act" onclick="stab(0)">Distinct Real Roots</button>
     <button class="tb" onclick="stab(1)">Repeated Roots</button>

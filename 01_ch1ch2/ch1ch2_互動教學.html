@@ -634,6 +634,19 @@ h3{margin-top:8px;margin-bottom:8px}
 <!-- ====== UNIT 8: 部分分式展開 ====== -->
 <section class="unit" id="u-7">
   <div class="uh"><span class="tag">Chapter 2</span><h1>部分分式展開 & 根的類型</h1><p>反 Laplace 轉換的核心技巧。點擊標籤切換 5 種根的類型（含 Example 2.3 / 3.2）。</p></div>
+
+  <div class="ib tip"><span class="ic">&#127919;</span><div class="ix"><strong>為什麼需要部分分式展開與根的類型分析？</strong><br><br>
+取得轉移函數 $G(s)$ 後，系統在 $s$ 域的輸出為：
+$$Y(s) = G(s)\,X(s) = \frac{N(s)}{D(s)}$$
+要回到時域 $y(t)$，必須計算 $\mathcal{L}^{-1}\{Y(s)\}$。但標準 Laplace 表只涵蓋<strong>簡單分式</strong>如 $\dfrac{1}{s+a}$ 或 $\dfrac{\omega}{s^2+\omega^2}$，無法直接反轉複雜的多項式比值。<br><br>
+<strong>部分分式展開</strong>將 $Y(s)$ 分解成多個簡單分式之和，每一項都可查表反轉換：<br>
+&nbsp;&nbsp;$\dfrac{N(s)}{D(s)} = \dfrac{A_1}{s-p_1} + \dfrac{A_2}{s-p_2} + \cdots$<br><br>
+$D(s)$ 的<strong>根</strong>（即<em>極點</em>）直接決定：<br>
+&bull; <strong>每個時域項的形式</strong> &mdash; 指數衰減、振盪、發散或常數<br>
+&bull; <strong>系統穩定性</strong> &mdash; 所有極點在左半平面 $\Rightarrow$ 穩定；任一極點在右半平面 $\Rightarrow$ 不穩定<br>
+&bull; <strong>響應速度與振盪頻率</strong> &mdash; 由每個極點的實部與虛部決定<br><br>
+<em>簡言之：分解分母 → 求出根 → 直接知道時域響應的樣貌，不需要解任何微分方程。</em></div></div>
+
   <div class="tg">
     <button class="tb act" onclick="stab(0)">實數相異根</button>
     <button class="tb" onclick="stab(1)">重根</button>
